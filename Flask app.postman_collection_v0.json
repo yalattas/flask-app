@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "d4084b3d-6372-41e9-a14f-b14a3303d324",
+		"name": "Flask app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "main page",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base}}/",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Another route",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\":200,\r\n    \"values\":{\r\n        \"username\":\"y.alattas\",\r\n        \"password\":\"password\",\r\n        \"message\":{\r\n            \"text\":\"123456789\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base}}/login/",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "json response",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base}}/json",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "example",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"language\":\"python\",\r\n    \"framework\": \"Flask\",\r\n    \"website\":\"yasser\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base}}/query-api",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"query-api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "example",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base}}/query?language=python&framework=flask&website=mine",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"query"
+					],
+					"query": [
+						{
+							"key": "language",
+							"value": "python"
+						},
+						{
+							"key": "framework",
+							"value": "flask"
+						},
+						{
+							"key": "website",
+							"value": "mine"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base",
+			"value": ""
+		}
+	]
+}
